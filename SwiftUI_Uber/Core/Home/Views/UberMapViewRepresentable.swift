@@ -26,6 +26,7 @@ struct UberMapViewRepresentable: UIViewRepresentable {
 
     }
     
+    //Handle map coordinate
     func makeCoordinator() -> MapCoordinator {
         return MapCoordinator(parent: self)
     }
