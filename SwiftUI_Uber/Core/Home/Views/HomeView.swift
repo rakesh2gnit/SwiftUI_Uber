@@ -21,11 +21,14 @@ struct HomeView: View {
                 LocationSearchActivationView()
                     .padding(.top, 72)
                     .onTapGesture {
-                        showLocationSearchView.toggle()
+                        withAnimation(.spring()) {
+                            showLocationSearchView.toggle()
+                        }
                     }
             }
             
-            MapViewActionButton()
+            MapViewActionButton(showLocationSeachView:
+            $showLocationSearchView)
                 .padding(.leading)
                 .padding(.top, 4)
         }
